@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Research Portfolio - Pookie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/images/research.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <h1>Pookie</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#research-papers">Research Papers</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div>
+            <h2>Welcome to my Pookie's Research Portfolio</h2>
+            <p>Explore our collection of academic research papers on various topics from technology to social sciences.
+            </p>
+        </div>
+        <div>
+            <img src="" alt="">
+        </div>
+    </section>
+    <section id="featured-paper">
+        <h1>Featured Paper</h1>
+        <div id="featured">
+            <p id="feat-title">Intelligence Dominance Grounded on Gardner's Multiple Intelligence Theory</p>
+            <p id="feat-p">A comprehensive study among Grade 11 Senior High School Students of Iloilo City National High
+                School</p>
+            <p><strong>Abastract:</strong>This study investigates the biases and hierarchical perceptions within the
+                Philippine Senior High School curriculum, specifically in the context of academic and non-academic
+                tracks. It examines how societal and institutional attitudes often elevate certain tracks, such as STEM,
+                above others, leading to issues of discrimination and unequal treatment among students. Drawing from
+                Gardner's theory of multiple intelligences, the study emphasizes the value of diverse student strengths
+                and advocates for educational frameworks that honor and develop individual talents across all fields.
+            </p>
+            <button onclick="viewPDF('/papers/RESEARCH REPORT PAPERS.docx.pdf')">View Paper</button>
+
+        </div>
+    </section>
+
+    <section id="research-papers">
+        <h2>Our Research Papers</h2>
+        <div id="papers-container">
+            <div class="paper">
+                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, cumque suscipit placeat totam et
+                    quae laudantium nostrum veritatis quam eveniet magnam vero ipsa in libero. Maiores eveniet corporis
+                    eligendi sapiente?</h3>
+                <p><strong>Abstract:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt,
+                    ut omnis, ducimus animi architecto nostrum necessitatibus placeat error eveniet cum voluptatem
+                    temporibus cupiditate? Saepe suscipit distinctio repellat modi eum!.</p>
+                <button onclick="viewPDF('/papers/RESEARCH REPORT PAPERS.docx.pdf')">View Paper</button>
+            </div>
+            <div class="paper">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, eos eum! Similique accusamus iusto
+                    ex ipsa aliquid incidunt hic quaerat suscipit dignissimos nesciunt ipsam, vel fugiat perferendis
+                    impedit, at sit.</h3>
+                <p><strong>Abstract:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis impedit
+                    harum nobis perferendis quibusdam, natus voluptates perspiciatis, consectetur adipisci maiores, iure
+                    aliquam. Repellat atque neque tenetur voluptas, itaque aliquam? Iusto!</p>
+                <button onclick="viewPDF('/papers/paper1.pdf')">View Paper</button>
+            </div>
+            <div class="paper">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequuntur, sunt, laudantium
+                    blanditiis veritatis qui velit dolor, quod rem modi ducimus quisquam distinctio. Sapiente quaerat
+                    molestias fugit, ut id quo!</h3>
+                <p><strong>Abstract:</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quod odio
+                    sit numquam voluptatum. Rerum quos aliquid aspernatur aliquam quam corporis sunt, ipsa, perspiciatis
+                    reprehenderit natus nulla magnam accusamus dicta..</p>
+                <button onclick="viewPDF('/papers/paper1.pdf')">View Paper</button>
+            </div>
+            <div class="paper">
+                <h3>The Future of Belle and Haime</h3>
+                <p><strong>Abstract:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cumque
+                    pariatur dolores accusantium obcaecati, architecto incidunt aperiam laboriosam totam aliquam
+                    blanditiis, voluptatem molestiae libero, fugiat quae? Beatae ipsa tenetur earum!.</p>
+                <button onclick="viewPDF('/papers/paper1.pdf')">View Paper</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p id="about-p">We are a group of passionate researchers committed to exploring innovative solutions in
+            technology,
+            sustainability, and society.</p>
+        <div class="team">
+            <div class="member">
+                <h3>Issa Belle M. Tuson</h3>
+                <p>Lead Researcher</p>
+            </div>
+            <div class="member">
+                <h3>Belle</h3>
+                <p>Cutie Patootie</p>
+            </div>
+            <div class="member">
+                <h3>Haime</h3>
+                <p>Beast</p>
+            </div>
+            <div class="member">
+                <h3>Oliver Llena</h3>
+                <p>Bebi ni Lead Researcher</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="sendEmail(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; Pookie - Research Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const subject = encodeURIComponent("Contact Form Message from " + name);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+            const mailtoLink = `mailto:yssabeltuson114@yahoo.com?subject=${subject}&body=${body}`;
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+
+</html>

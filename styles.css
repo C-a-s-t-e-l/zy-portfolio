@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto'
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F1F0FB;
+    color: #444;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: #1A1F2C;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 65px;
+}
+
+header h1 {
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+header a {
+    text-decoration: none;
+    color: #1A1F2C;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #1A1F2C;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #9dbd88;
+}
+
+#hero {
+    background-color: #9dbd88;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    height: 50vh;
+}
+
+#featured-paper {
+    height: 50vh;
+    background-color: #F1F0FB;
+}
+
+
+#hero h2 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#hero p {
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+
+#featured-paper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+#featured-paper h1 {
+    font-size: 3em;
+    text-align: left;
+    margin: 10px 0px;
+}
+
+#feat-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#feat-p {
+    font-size: 1.1em;
+}
+
+#featured p:last-child {
+    color: red;
+}
+
+#featured {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 70%;
+    height: 65%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: justify;
+    gap: 10px;
+    overflow: auto;
+}
+
+#featured button {
+    width: 15%;
+    max-width: 150px;
+    min-width: 150px;
+}
+
+#research-papers {
+    padding: 50px 20px;
+    background-color: #F1F0FB;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#papers-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100%;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#research-papers h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.paper {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 45%;
+    height: 43%;
+    overflow: auto;
+    text-align: justify;
+}
+
+.paper:hover,
+#featured:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.paper h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #34495e;
+    font-weight: 600;
+}
+
+.paper p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.paper p strong {
+    font-weight: 600;
+    color: #34495e;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #F97316;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #9dbd88;
+    transform: scale(1.05);
+}
+
+#about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F1F0FB;
+    padding: 50px 20px;
+    height: 50vh;
+    gap: 20px;
+    width: 100%;
+}
+
+#about-p {
+    text-align: center;
+}
+
+#about-us h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.team {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 80%;
+}
+
+.member h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.member p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+
+#contact {
+    background-color: #F1F0FB;
+    padding: 50px 20px;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 1px solid #34495e;
+    outline: none;
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #9dbd88;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
