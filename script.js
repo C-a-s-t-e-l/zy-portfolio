@@ -1,6 +1,6 @@
 function viewPDF(pdfPath) {
-
-    window.open(pdfPath, '_blank');
+    const baseUrl = 'https://c-a-s-t-e-l.github.io/zy-portfolio';
+    window.open(`${baseUrl}${pdfPath}`, '_blank');
 }
 
 
