@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+
+<body>
+    <section id="about-section">
+        <div id="button-div-back">
+            <button onclick="goBack()">Back to Portfolio</button>
+        </div>
+        <div id="intro">
+            <div id="intro-image-frame">
+                <img src="" alt="" id="student-image">
+            </div>
+            <div id="intro-text">
+                <img src="" alt="" id="logo-img">
+                <h1 id="student-name"></h1>
+                <p id="student-info"></p>
+            </div>
+        </div>
+        <div id="creds">
+            <div id="lang-ed">
+                <div id="language"></div>
+                <div id="education"></div>
+            </div>
+            <div id="credential"></div>
+            <div id="aspiration"></div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+
+
+        const studentData = JSON.parse(localStorage.getItem("studentData"));
+
+        if (studentData) {
+            document.getElementById("student-image").src = studentData.image;
+            document.getElementById("logo-img").src = studentData.logo;
+            document.getElementById("student-name").textContent = studentData.name;
+            document.getElementById("student-info").textContent = studentData.info;
+            document.getElementById("language").textContent = `Languages: ${studentData.language}`;
+            document.getElementById("education").textContent = `Education: ${studentData.education}`;
+            document.getElementById("credential").textContent = `Credential: ${studentData.credential}`;
+            document.getElementById("aspiration").textContent = `Aspiration: ${studentData.aspiration}`;
+        } else {
+            document.getElementById("about-section").innerHTML = "<p>Student data not found. Please go back and try again.</p>";
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+
+</body>
+
+</html>

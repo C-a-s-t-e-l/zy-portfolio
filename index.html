@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Research Portfolio - Pookie</title>
+    <title>PortfolioS.</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="/images/research.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="shortcut icon" href="D:\Docs\Zy-portfolio\images\PortfolioS-logo.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="#">
-                <h1>Pookie</h1>
-            </a>
+            <img src="/images/PortfolioS-logo.png" alt="">
+            <h1>PortfolioS</h1>
         </div>
-        <nav>
+        <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+            &#9776;
+        </button>
+        <nav class="nav-menu hidden">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#research-papers">Research Papers</a></li>
+                <li><a href="#research-papers">Projects</a></li>
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -28,121 +31,332 @@
     </header>
 
     <section id="hero">
-        <div>
-            <h2>Welcome to my Pookie's Research Portfolio</h2>
-            <p>Explore our collection of academic research papers on various topics from technology to social sciences.
-            </p>
-        </div>
-        <div>
-            <img src="" alt="">
-        </div>
-    </section>
-    <section id="featured-paper">
-        <h1>Featured Paper</h1>
-        <div id="featured">
-            <p id="feat-title">Intelligence Dominance Grounded on Gardner's Multiple Intelligence Theory</p>
-            <p id="feat-p">A comprehensive study among Grade 11 Senior High School Students of Iloilo City National High
-                School</p>
-            <p><strong>Abastract:</strong>This study investigates the biases and hierarchical perceptions within the
-                Philippine Senior High School curriculum, specifically in the context of academic and non-academic
-                tracks. It examines how societal and institutional attitudes often elevate certain tracks, such as STEM,
-                above others, leading to issues of discrimination and unequal treatment among students. Drawing from
-                Gardner's theory of multiple intelligences, the study emphasizes the value of diverse student strengths
-                and advocates for educational frameworks that honor and develop individual talents across all fields.
-            </p>
-            <button onclick="viewPDF('/papers/RESEARCH REPORT PAPERS.docx.pdf')">View Paper</button>
+        <img id="hero-bg" src="/images/hero-anima.gif" alt="anima">
+        <div class="area">
+            <div class="slider">
+                <div class="slide_viewer">
+                    <div class="slide_group">
+
+
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="hero-name">
+                                    <p class="greeting">Hi! We are,</p>
+                                    <p><span id="typed"></span><span class=" cursor">&nbsp;</span></p>
+                                    <p class="add-info">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                        accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="/images/members/zy.png" alt="Image-placeholder">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="hero-name">
+                                    <p class="greeting">Hi! I am,</p>
+                                    <p class="slide-name">Issa Belle M. Tuson</p>
+                                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="/images/members/zy.png" alt="Image-placeholder">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="hero-name">
+                                    <p class="greeting">Hi! I am,</p>
+                                    <p class="slide-name">Issa Belle M. Tuson</p>
+                                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="/images/members/zy.png" alt="Image-placeholder">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="hero-name">
+                                    <p class="greeting">Hi! I am,</p>
+                                    <p class="slide-name">Issa Belle M. Tuson</p>
+                                    <p class="add-info">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                        accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="/images/members/zy.png" alt="Image-placeholder">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="hero-name">
+                                    <p class="greeting">Hi! I am,</p>
+                                    <p class="slide-name">Issa Belle M. Tuson</p>
+                                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="/images/members/zy.png" alt="Image-placeholder">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="hero-name">
+                                    <p class="greeting">Hi! I am,</p>
+                                    <p class="slide-name">Issa Belle M. Tuson</p>
+                                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="/images/members/zy.png" alt="Image-placeholder">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="hero-name">
+                                    <p class="greeting">Hi! I am,</p>
+                                    <p class="slide-name">Issa Belle M. Tuson</p>
+                                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="/images/members/zy.png" alt="Image-placeholder">
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="slide_buttons"></div>
+                </div>
+
+                <div class="directional_nav">
+                    <div class="previous_btn" title="Previous"></div>
+                    <!-- &lt; -->
+                    <div class="next_btn" title="Next"></div>
+                    <!-- &gt; -->
+                </div>
+            </div>
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
 
         </div>
     </section>
 
     <section id="research-papers">
-        <h2>Our Research Papers</h2>
-        <div id="papers-container">
-            <div class="paper">
-                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, cumque suscipit placeat totam et
-                    quae laudantium nostrum veritatis quam eveniet magnam vero ipsa in libero. Maiores eveniet corporis
-                    eligendi sapiente?</h3>
-                <p><strong>Abstract:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt,
-                    ut omnis, ducimus animi architecto nostrum necessitatibus placeat error eveniet cum voluptatem
-                    temporibus cupiditate? Saepe suscipit distinctio repellat modi eum!.</p>
-                <button onclick="viewPDF('/papers/RESEARCH REPORT PAPERS.docx.pdf')">View Paper</button>
-            </div>
-            <div class="paper">
-                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, eos eum! Similique accusamus iusto
-                    ex ipsa aliquid incidunt hic quaerat suscipit dignissimos nesciunt ipsam, vel fugiat perferendis
-                    impedit, at sit.</h3>
-                <p><strong>Abstract:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis impedit
-                    harum nobis perferendis quibusdam, natus voluptates perspiciatis, consectetur adipisci maiores, iure
-                    aliquam. Repellat atque neque tenetur voluptas, itaque aliquam? Iusto!</p>
-                <button onclick="viewPDF('/papers/paper1.pdf')">View Paper</button>
-            </div>
-            <div class="paper">
-                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequuntur, sunt, laudantium
-                    blanditiis veritatis qui velit dolor, quod rem modi ducimus quisquam distinctio. Sapiente quaerat
-                    molestias fugit, ut id quo!</h3>
-                <p><strong>Abstract:</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quod odio
-                    sit numquam voluptatum. Rerum quos aliquid aspernatur aliquam quam corporis sunt, ipsa, perspiciatis
-                    reprehenderit natus nulla magnam accusamus dicta..</p>
-                <button onclick="viewPDF('/papers/paper1.pdf')">View Paper</button>
-            </div>
-            <div class="paper">
-                <h3>The Future of Belle and Haime</h3>
-                <p><strong>Abstract:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cumque
-                    pariatur dolores accusantium obcaecati, architecto incidunt aperiam laboriosam totam aliquam
-                    blanditiis, voluptatem molestiae libero, fugiat quae? Beatae ipsa tenetur earum!.</p>
-                <button onclick="viewPDF('/papers/paper1.pdf')">View Paper</button>
-            </div>
 
+        <div id="content-container">
+            <h2 id="project-name">Projects</h2>
+            <div id="projects-container">
+                <div class="container content1">
+                    <div class="card">
+                        <div class="box box1">
+                            <p>William Shakespeare</p>
+                            <h2>William Shakespeare</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dolor magnam cupiditate,
+                                nihil
+                                reprehenderit itaque distinctio architecto laboriosam, ipsum officia dolorum non odio
+                                qui
+                                soluta
+                                voluptates atque vel quidem ad!</p>
+
+                        </div>
+
+                    </div>
+                    <button onclick="viewPDF('/papers/RESEARCH REPORT PAPERS.docx.pdf')">View Paper</button>
+                </div>
+
+
+                <div class="container">
+                    <div class="card">
+                        <div class="box box2">
+                            <p>Albert Einstein</p>
+                            <h2>Albert Einstein</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dolor magnam cupiditate,
+                                nihil
+                                reprehenderit itaque distinctio architecto laboriosam, ipsum officia dolorum non odio
+                                qui
+                                soluta
+                                voluptates atque vel quidem ad!</p>
+                        </div>
+                    </div>
+                    <button
+                        onclick="viewPDF('/papers/ANXIETY LEVELS AND ACADEMIC PERFORMANCE AMONG STEM STUDENTS  AT ILOILO CITY NATIONAL HIGH SCHOOL.pdf')">View
+                        Paper</button>
+                </div>
+
+
+                <div class="container">
+                    <div class="card">
+                        <div class="box box3">
+                            <p>Isaac Newton </p>
+                            <h2>Isaac Newton</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dolor magnam cupiditate,
+                                nihil
+                                reprehenderit itaque distinctio architecto laboriosam, ipsum officia dolorum non odio
+                                qui
+                                soluta
+                                voluptates atque vel quidem ad!</p>
+                        </div>
+                    </div>
+                    <button onclick="('/papers/THE EFFECT OF WELCOME PLANT .docx')">View
+                        Paper</button>
+                </div>
+            </div>
         </div>
-
     </section>
 
     <section id="about-us">
-        <h2>About Us</h2>
-        <p id="about-p">We are a group of passionate researchers committed to exploring innovative solutions in
-            technology,
-            sustainability, and society.</p>
-        <div class="team">
-            <div class="member">
-                <h3>Issa Belle M. Tuson</h3>
-                <p>Lead Researcher</p>
+        <div id="students-container">
+            <div class="students odd">
+                <div class="intro-image-frame">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                        alt="Bulbasaur" class="student-image">
+                </div>
+                <div class="intro-text">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg"
+                        alt="Pokemon Logo" class="logo-img">
+                    <h1 class="student-name">Bulbasaur</h1>
+                    <p class="student-info">A Grass/Poison type Pokémon known for its plant bulb that stores energy.</p>
+                </div>
+                <button class="loadAbout" data-id="1">Read More</button>
             </div>
-            <div class="member">
-                <h3>Belle</h3>
-                <p>Cutie Patootie</p>
+            <div class="students even">
+                <div class="intro-image-frame">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+                        alt="Charmander" class="student-image">
+                </div>
+                <div class="intro-text">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg"
+                        alt="Pokemon Logo" class="logo-img">
+                    <h1 class="student-name">Charmander</h1>
+                    <p class="student-info">A Fire type Pokémon with a flame at the tip of its tail that burns brighter
+                        with its emotions.</p>
+                </div>
+                <button class="loadAbout" data-id="2">Read More</button>
             </div>
-            <div class="member">
-                <h3>Haime</h3>
-                <p>Beast</p>
+            <div class="students odd">
+                <div class="intro-image-frame">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+                        alt="Squirtle" class="student-image">
+                </div>
+                <div class="intro-text">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg"
+                        alt="Pokemon Logo" class="logo-img">
+                    <h1 class="student-name">Squirtle</h1>
+                    <p class="student-info">A Water type Pokémon that withdraws into its shell and sprays water to
+                        defend itself.</p>
+                </div>
+                <button class="loadAbout" data-id="3">Read More</button>
             </div>
-            <div class="member">
-                <h3>Oliver Llena</h3>
-                <p>Bebi ni Lead Researcher</p>
+            <div class="students even">
+                <div class="intro-image-frame">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+                        alt="Pikachu" class="student-image">
+                </div>
+                <div class="intro-text">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg"
+                        alt="Pokemon Logo" class="logo-img">
+                    <h1 class="student-name">Pikachu</h1>
+                    <p class="student-info">An Electric type Pokémon that stores electricity in its cheeks and releases
+                        it during attacks.</p>
+                </div>
+                <button class="loadAbout" data-id="4">Read More</button>
+            </div>
+            <div class="students odd">
+                <div class="intro-image-frame">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"
+                        alt="Jigglypuff" class="student-image">
+                </div>
+                <div class="intro-text">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg"
+                        alt="Pokemon Logo" class="logo-img">
+                    <h1 class="student-name">Jigglypuff</h1>
+                    <p class="student-info">A Normal/Fairy type Pokémon known for its melodious singing that lulls foes
+                        to sleep.</p>
+                </div>
+                <button class="loadAbout" data-id="5">Read More</button>
+            </div>
+            <div class="students even">
+                <div class="intro-image-frame">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"
+                        alt="Gengar" class="student-image">
+                </div>
+                <div class="intro-text">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg"
+                        alt="Pokemon Logo" class="logo-img">
+                    <h1 class="student-name">Gengar</h1>
+                    <p class="student-info">A Ghost/Poison type Pokémon that lurks in the shadows and terrifies its
+                        opponents.</p>
+                </div>
+                <button class="loadAbout" data-id="6">Read More</button>
+            </div>
+            <div class="students odd">
+                <div class="intro-image-frame">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"
+                        alt="Mewtwo" class="student-image">
+                </div>
+                <div class="intro-text">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg"
+                        alt="Pokemon Logo" class="logo-img">
+                    <h1 class="student-name">Mewtwo</h1>
+                    <p class="student-info">A Psychic type Pokémon created by genetic manipulation, known for its
+                        immense power.</p>
+                </div>
+                <button class="loadAbout" data-id="7">Read More</button>
             </div>
         </div>
     </section>
 
+
+
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2>Contact Us: </h2>
         <form onsubmit="sendEmail(event)">
             <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Enter name" required>
 
             <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
 
             <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder="Enter message"></textarea>
 
             <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; Pookie - Research Portfolio</p>
+        <p>&copy; Pikachu Uchiha - Research Portfolio</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script>
         function sendEmail(event) {
             event.preventDefault();
@@ -154,7 +368,7 @@
             const subject = encodeURIComponent("Contact Form Message from " + name);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
-            const mailtoLink = `mailto:yssabeltuson114@yahoo.com?subject=${subject}&body=${body}`;
+            const mailtoLink = `mailto:issabelletuson1104@gmail.com?subject=${subject}&body=${body}`;
 
             window.location.href = mailtoLink;
         }

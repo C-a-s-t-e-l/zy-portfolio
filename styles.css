@@ -5,16 +5,19 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Roboto'
+    font-family: 'Montserrat', sans-serif;
 }
 
-
-
 body {
-    font-family: 'Roboto', sans-serif;
     background-color: #F1F0FB;
     color: #444;
-    line-height: 1.6;
+    line-height: 1.3;
+
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 header {
@@ -22,29 +25,50 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: transparent;
     color: #1A1F2C;
-    padding: 20px 0;
+    padding: 10px 30px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 65px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    /* background: rgba(255, 255, 255, 0.2); */
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.2px);
+    -webkit-backdrop-filter: blur(4.2px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    height: 10vh;
+}
+
+.logo {
+    height: 80%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    max-height: 80%;
+    width: 15%;
+
+}
+
+.logo h1 {
+    font-size: 40px;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 1px;
 }
 
 header a {
     text-decoration: none;
     color: #1A1F2C;
-}
-
-.logo {
-    margin-left: 30px;
 }
 
 nav {
@@ -56,65 +80,79 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+    gap: 60px;
 }
 
 nav ul li a {
     color: #1A1F2C;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 20px;
+    font-weight: 400;
     letter-spacing: 1px;
     transition: color 0.3s ease;
+    padding: 1.5vh;
 }
 
 nav ul li a:hover {
-    color: #9dbd88;
+    color: antiquewhite;
+    font-size: 20px;
+    background-color: #1A1F2C;
+    font-weight: 500;
+    border-radius: 10px;
 }
+
+
+
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1A1F2C;
+}
+
 
 #hero {
     background-color: #9dbd88;
-    padding: 100px 20px;
+    /* padding: 80px 20px; */
     text-align: center;
     color: white;
-    height: 50vh;
+    height: 100vh;
+    display: flex;
+    margin-top: -10vh;
 }
 
-#featured-paper {
-    height: 50vh;
-    background-color: #F1F0FB;
+#hero-bg {
+    z-index: 1;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
 }
-
 
 #hero h2 {
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 15px;
-    margin-top: 10px;
 }
 
-#hero p {
-    font-size: 1.4em;
-    margin-top: 10px;
+.hero-name {
+    text-align: start;
 }
 
 #featured-paper {
+    background-color: #F1F0FB;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-
+    padding: 50px 20px;
 }
 
 #featured-paper h1 {
-    font-size: 3em;
-    text-align: left;
-    margin: 10px 0px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #34495e;
 }
 
 #feat-title {
@@ -123,11 +161,7 @@ nav ul li a:hover {
 }
 
 #feat-p {
-    font-size: 1.1em;
-}
-
-#featured p:last-child {
-    color: red;
+    font-size: 1.2em;
 }
 
 #featured {
@@ -142,7 +176,7 @@ nav ul li a:hover {
     padding: 30px;
     text-align: justify;
     gap: 10px;
-    overflow: auto;
+    margin-bottom: 30px;
 }
 
 #featured button {
@@ -152,30 +186,27 @@ nav ul li a:hover {
 }
 
 #research-papers {
-    padding: 50px 20px;
     background-color: #F1F0FB;
     text-align: center;
     width: 100%;
-    height: 100vh;
+}
+
+#research-papers h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#project-name {
+    margin-left: 4%;
 }
 
 #papers-container {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-    height: 100%;
     flex-wrap: wrap;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    gap: 30px;
 }
-
-#research-papers h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
 
 .paper {
     background-color: #fff;
@@ -183,17 +214,11 @@ nav ul li a:hover {
     border-radius: 12px;
     border: 1px solid #ddd;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 45%;
     height: 43%;
     overflow: auto;
     text-align: justify;
-}
-
-.paper:hover,
-#featured:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .paper h3 {
@@ -207,11 +232,6 @@ nav ul li a:hover {
     font-size: 1.1em;
     color: #7f8c8d;
     margin-bottom: 20px;
-}
-
-.paper p strong {
-    font-weight: 600;
-    color: #34495e;
 }
 
 button {
@@ -231,32 +251,195 @@ button:hover {
 }
 
 #about-us {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #e6e6e6;
+    overflow-x: auto;
+}
+
+/* uncomment webkit code below if you want scrollbar of about us to be not visible */
+
+/* ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+} */
+
+#students-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 200%;
+    flex-shrink: 0;
+    overflow: visible;
+    gap: 1%;
+}
+
+.intro-image-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.intro-image-frame img {
+    width: 70%;
+    height: 100%;
+
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+}
+
+.logo-img {
+    width: 50%;
+    height: 30%;
+}
+
+.students {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+    max-width: 400px;
+    height: 60%;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.students:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.students.odd {
+    background: radial-gradient(circle at 0% 0%, #f6e5b7, #e8bd5e);
+
+}
+
+.students.even {
+    background: linear-gradient(to bottom right, #5a5b56, #262722);
+    color: white;
+
+}
+
+
+#content-container {
+    width: 100%;
+    height: 101vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #F1F0FB;
-    padding: 50px 20px;
-    height: 50vh;
-    gap: 20px;
+    align-items: flex-start;
+    background: linear-gradient(to bottom right, #5a5b56, #262722);
+
+}
+
+#projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
     width: 100%;
 }
 
-#about-p {
-    text-align: center;
+.container {
+    width: 25%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 2;
+    height: 50%;
+    transition: ease 1s;
+    margin: 0px 10px;
+    flex-direction: column;
+    background: linear-gradient(to right, #ffffff, #d1d0d0);
+    border-radius: 30px;
+    padding: 10px;
 }
 
-#about-us h2 {
-    text-align: center;
-    font-size: 3em;
-    margin-bottom: 20px;
-    font-weight: 700;
+.container .box {
+
+    width: 100%;
+    min-height: 320px;
+    height: 100%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 30px;
+    transition: all 0.5 ease-in;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    border-radius: 30px;
+}
+
+
+
+.container .box.box1 {
+    background-color: transparent;
+}
+
+.container .box.box2,
+.container .box.box3 {
+    background-color: transparent;
+
+}
+
+.container.content1 {
+    width: 40%;
+    background: radial-gradient(circle at 0% 0%, #f6e5b7, #e8bd5e);
+}
+
+.card {
+    width: 100%;
+}
+
+.container:hover {
+    width: 60%;
+    ;
+}
+
+.container button {
+
+    /* min-width: 30%;
+    max-width: 150px; */
+    width: 150px;
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    background-color: #e7bc5e;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.container.content1 button {
+    background-color: #272822;
 }
 
 .team {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 100%;
+    gap: 20px;
+    justify-content: center;
     width: 100%;
 }
 
@@ -271,7 +454,7 @@ button:hover {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 80%;
+    height: 200px;
 }
 
 .member h3 {
@@ -286,29 +469,48 @@ button:hover {
 }
 
 #contact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100vh;
+    width: 100%;
     background-color: #F1F0FB;
-    padding: 50px 20px;
+    padding-left: 300px;
+    padding-bottom: 30px;
 }
 
+
 #contact h2 {
+    font-weight: bold;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 5.5em;
     margin-bottom: 20px;
+    -webkit-text-stroke: 0.09375rem #0d1b1e;
+    -o-text-stroke: 0.09375rem #0d1b1e;
+    -webkit-text-stroke: 0.09375rem #0d1b1e;
+    color: #e7bc5e;
+    letter-spacing: 6px;
+    text-shadow: 5px 5px 0px #0d1b1e;
 }
 
 form {
-    background-color: white;
-    max-width: 600px;
+    background: radial-gradient(circle at 0% 0%, #f6e5b7, #e8bd5e);
+    height: 60%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 form label {
     margin-bottom: 5px;
+    font-weight: bold;
+
 }
 
 form input,
@@ -316,9 +518,9 @@ form textarea {
     margin-bottom: 20px;
     padding: 15px;
     font-size: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: transparent;
     transition: border 0.3s ease;
 }
 
@@ -344,10 +546,111 @@ form button:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
 footer {
     background-color: #34495e;
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #featured-paper h1 {
+        font-size: 2em;
+    }
+
+    #featured {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #papers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paper {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .member {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    #hero h2 {
+        font-size: 1.5em;
+    }
+
+    .paper {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .member {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+
+    nav {
+        position: relative;
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu.hidden {
+        display: none;
+    }
 }
